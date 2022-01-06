@@ -15,6 +15,7 @@ jobs:
     requires: [ ~commit ]
     steps:
       - show: echo 'C'
+      - sleep: sleep 15
   D:
     requires: [ ~A, B, C]
     steps:
