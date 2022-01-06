@@ -1,0 +1,22 @@
+shared:
+  image: node:14
+    
+jobs:
+  A:
+    requires: [ ~commit ]
+    steps:
+      - show: echo 'A'
+  B:
+    requires: [ ~commit ]
+    steps:
+      - show: echo 'B'
+      - sleep: sleep 90
+  C:
+    requires: [ ~commit ]
+    steps:
+      - show: echo 'C'
+  D:
+    requires: [ ~A, B, C]
+    steps:
+      - show: echo 'D'
+      - sleep: sleep 30
