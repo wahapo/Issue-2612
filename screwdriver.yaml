@@ -10,7 +10,7 @@ jobs:
     requires: [ ~commit ]
     steps:
       - show: echo 'B'
-      - sleep: sleep 120
+      - sleep: sleep 180
   C:
     requires: [ ~commit ]
     steps:
